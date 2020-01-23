@@ -14,7 +14,7 @@ public class TestClass {
 	@BeforeMethod
 	public void launchDriver()
 	{
-		System.setProperty("webdriver.chrome.driver", "Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
