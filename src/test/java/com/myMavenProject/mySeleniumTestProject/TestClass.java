@@ -18,7 +18,7 @@ public class TestClass {
 		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Drivers\\chromedriver.exe");
 		ChromeOptions chromeOptions= new ChromeOptions();
 		chromeOptions.setBinary("C:\\Selenium\\Drivers\\chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = new ChromeDriver(chromeOptions);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
 	}
