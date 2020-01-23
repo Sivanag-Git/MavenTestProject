@@ -1,5 +1,5 @@
 package com.myMavenProject.mySeleniumTestProject;
-import java.io.File;
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,9 +15,9 @@ public class TestClass {
 	@BeforeMethod
 	public void launchDriver()
 	{
-		File file = new File("Drivers/chromedriver.exe"); 
-		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath()); 		
+		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe"); 		
 		ChromeOptions chromeOptions= new ChromeOptions();
+		chromeOptions.setBinary("C:\\Users\\Admin\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
 		chromeOptions.addArguments("disable-infobars"); // disabling infobars
 		chromeOptions.addArguments("--disable-extensions"); // disabling extensions
 		chromeOptions.addArguments("--disable-gpu"); // applicable to windows os only
