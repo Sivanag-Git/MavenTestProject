@@ -14,7 +14,7 @@ public class TestClass {
 	@BeforeMethod
 	public void launchDriver()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
@@ -24,7 +24,7 @@ public class TestClass {
 	public void Test1()
 	{
 		driver.navigate().to("http://AutomationTalks.com");
-		System.out.println(driver.getTitle());
+		System.out.println("Title of the application: "+driver.getTitle());
 	}
 	
 	@AfterMethod
